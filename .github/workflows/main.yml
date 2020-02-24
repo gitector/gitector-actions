@@ -7,12 +7,12 @@ jobs:
     steps:
       # To use this repository's private action, you must check out the repository
       - name: Checkout
-        uses: gitector/gitector-actions@v2
+        uses: gitector/gitector-actions@v3
       - name: Hello world action step
         uses: ./ # Uses an action in the root directory
         id: hello
         with:
-          branch-name: 'master'
+          branch-name: '.'
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.errors }}"
