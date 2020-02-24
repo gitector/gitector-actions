@@ -1,3 +1,3 @@
 FROM gitector/gitector
 
-ENTRYPOINT ["gitector"]
+ENTRYPOINT ["ls && gitector"]
