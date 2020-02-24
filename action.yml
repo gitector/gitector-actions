@@ -5,7 +5,7 @@ inputs:
   branch-name:  # id of input
     description: 'Which branch to compare'
     required: true
-    default: '..master'
+    default: '.'
 outputs:
   errors: # id of output
     description: 'List of errors'

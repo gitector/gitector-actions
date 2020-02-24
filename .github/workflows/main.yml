@@ -7,7 +7,7 @@ jobs:
     steps:
       # To use this repository's private action, you must check out the repository
       - name: Checkout
-        uses: gitector/gitector-actions@v3
+        uses: gitector/gitector-actions@v4
       - name: Hello world action step
         uses: ./ # Uses an action in the root directory
         id: hello
