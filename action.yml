@@ -1,0 +1,16 @@
+# action.yml
+name: 'Gitector'
+description: 'Check your commits with gitector'
+inputs:
+  branch-name:  # id of input
+    description: 'Which branch to compare'
+    required: true
+    default: '..master'
+outputs:
+  errors: # id of output
+    description: 'List of errors'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.branch-name }}
