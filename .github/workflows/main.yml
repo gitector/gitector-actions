@@ -1,0 +1,18 @@
+on: [push]
+
+jobs:
+  gitector:
+    runs-on: ubuntu-latest
+    name: Gitector
+    steps:
+      # To use this repository's private action, you must check out the repository
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Run gitector from current repo
+        uses: ./ # Uses an action in the root directory
+        id: gitector
+        with:
+          branch-name: '.'
+      # Use the output from the `hello` step
+      - name: Get gitector output
+        run: echo "Gitector returned ${{ steps.gitector.outputs.status_code }}"
